@@ -12,7 +12,7 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label for="CPFBene">CPF:</label>
-                <input type="text" class="form-control" id="CPFBene" name="CPFBene" placeholder="Ex.: 000.011.010-00" maxlength="14">
+                <input type="text" class="form-control" id="CPF" name="CPF" placeholder="Ex.: 000.011.010-00" maxlength="14">
             </div>
         </div>
         <div class="col-md-6">
@@ -35,10 +35,10 @@
 @section scripts{
     <script>
         $(document).ready(function () {
-            var CPFBene = '@Model.CPF';
+            var CPF = '@Model.CPF';
             var nome = '@Model.Nome';
 
-            $('#CPFBene').val(CPFBene);
+            $('#CPF').val(CPF);
             $('#Nome').val(nome);
 
             $('#formCadastro').on('submit', function (e) {
@@ -61,4 +61,4 @@
     </script>
 }
 
-@Html.Partial("Forms")
+@*@Html.Partial("Forms")*@

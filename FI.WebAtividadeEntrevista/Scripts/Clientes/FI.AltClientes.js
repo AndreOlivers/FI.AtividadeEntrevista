@@ -39,9 +39,10 @@ $(document).ready(function () {
                     ModalDialog("Ocorreu um erro", "Ocorreu um erro interno no servidor.");
             },
             success: function (r) {
-                ModalDialog("Sucesso!", r);
-                $("#formCadastro")[0].reset();
-                window.location.href = urlRetorno;
+                ModalDialog("SUCESSO!", "Cliente foi atualizado!");
+                setTimeout(function () {
+                    window.location.href = '/Cliente';
+                }, 1000);
             }
         });
     });
